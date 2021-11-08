@@ -14,15 +14,12 @@ public class ViaCepApplication {
 		SpringApplication.run(ViaCepApplication.class, args);
 		
 	}
-	@Bean
+        @Bean
 	public CommandLineRunner cep(ViaCepRepository repository) {
-		return (args)-> {
-			repository.save(new ViaCep("01","01001-000" ,"Praça da Sé","lado ímpar", "São Paulo","SP","3550308","1004","11","7107"));
-            
-            
-            
-           
+                return (args) -> {
+			repository.save(new ViaCep("01001-000", "Praça da Sé", "lado ímpar", "Sé", "São Paulo", "SP"));
+
 		};
 	}
+
 }
-	
